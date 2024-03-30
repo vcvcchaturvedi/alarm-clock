@@ -1,0 +1,88 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.light-theme {
+  --is-light-theme: initial;
+  --is-dark-theme: ;
+}
+
+.dark-theme {
+  --is-light-theme: ;
+  --is-dark-theme: initial;
+}
+
+body {
+  background-color: var(--is-light-theme, rgba(186, 160, 55, 0.196))
+    var(--is-dark-theme, rgba(18, 23, 41, 0.804));
+  color: var(--is-light-theme, rgb(2, 9, 108)) var(--is-dark-theme, white);
+}
+
+header {
+  text-align: center;
+  padding: 40px;
+}
+
+header p {
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+input[type="time"],
+select,
+button {
+  background-color: var(--is-light-theme, rgba(11, 177, 67, 0.196))
+    var(--is-dark-theme, rgba(19, 5, 71, 0.804));
+  color: var(--is-light-theme, rgb(1, 0, 8))
+    var(--is-dark-theme, rgb(225, 168, 33));
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@keyframes changeBackgroundColor {
+  from {
+    background-color: #0e0439;
+  }
+  to {
+    background-color: #49db36;
+  }
+}
+
+.alarmAnimation {
+  animation: changeBackgroundColor 0.8s infinite alternate;
+}
+
+span {
+  font-size: 1.4rem;
+  font-weight: 700;
+}

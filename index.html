@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alarm Clock</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- header section -->
+    <section>
+      <header>
+        <p>Alarm Clock</p>
+        <p id="currentTime"></p>
+      </header>
+    </section>
+    <!-- main section -->
+    <section>
+      <div class="flex flex-column flex-wrap justify-content-between">
+        <!-- Render Alarm setting module -->
+        <div class="flex flex-wrap justify-content-center align-items-center">
+          <label for="time">Select Time to set Alarm : </label>
+          <input type="time" id="time" />
+          <!-- Select dropdown for alarmsound -->
+          <select id="alarmSound">
+            <option
+              value="./alarms/mixkit-alarm-digital-clock-beep-989.wav"
+              selected
+            >
+              Digital Alarm Beep
+            </option>
+            <option value="./alarms/mixkit-alarm-tone-996.wav">
+              Alarm Tone
+            </option>
+            <option value="./alarms/mixkit-battleship-alarm-1001.wav">
+              Battleship Alert
+            </option>
+            <option
+              value="./alarms/mixkit-casino-jackpot-alarm-and-coins-1991.wav"
+            >
+              Casino Jackpot
+            </option>
+            <option value="./alarms/mixkit-interface-hint-notification-911.wav">
+              Interface Hint
+            </option>
+            <option
+              value="./alarms/mixkit-rooster-crowing-in-the-morning-2462.wav"
+            >
+              Rooster in the morning
+            </option>
+            <option value="./alarms/mixkit-scanning-sci-fi-alarm-905.wav">
+              Scanning Sci Fi
+            </option>
+            <option value="./alarms/mixkit-short-rooster-crowing-2470.wav">
+              Rooster Short
+            </option>
+          </select>
+          <button id="setAlarm">Set Alarm</button>
+        </div>
+        <!-- Show set alarms module -->
+        <div
+          class="flex flex-column flex-wrap justify-content-center align-items-center"
+        >
+          <h2>Your Alarms</h2>
+          <div
+            id="myAlarms"
+            class="flex flex-column flex-wrap justify-content-center align-items-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <audio id="alarmAudio"></audio>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
